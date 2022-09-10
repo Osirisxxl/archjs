@@ -1,1 +1,1 @@
-export default url => fetch(url).then(response => response.json());
+export default (url) => fetch(url).then((response) => response.json());

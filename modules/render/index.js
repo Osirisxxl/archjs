@@ -1,9 +1,7 @@
-import {htmlToElements} from "./htmlStringToElements";
+import { htmlToElements } from './htmlStringToElements';
 
 export default async (htmlSelector, component) => {
   const htmlElements = htmlToElements(await component.render());
 
-  document
-    .querySelector(htmlSelector)
-    .append(...htmlElements);
-}
+  document.querySelector(htmlSelector).append(...htmlElements);
+};
