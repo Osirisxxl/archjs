@@ -1,5 +1,5 @@
 export default class Component {
-  render() {
+  async render() {
     throw new Error('not implemented!');
   }
 }

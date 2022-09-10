@@ -11,6 +11,7 @@
   "author": "",
   "license": "MIT",
   "devDependencies": {
+    "simpledotcss": "2.1.1",
     "vite": "3.1.0"
   }
 }
