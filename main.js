@@ -1,4 +1,4 @@
-document.querySelector('#app').innerHTML = `
-  <div>
-    <h1>Say hello to your first archjs setup!</h1>
-  </div>`
+import render from './modules/render';
+import Title from './modules/title';
+
+render('#app', new Title());
