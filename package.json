@@ -2,14 +2,15 @@
   "name": "archjs",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "main.js",
   "scripts": {
-    "start": "node index.js",
+    "start": "vite",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
   "author": "",
-  "license": "ISC",
-  "dependencies": {
+  "license": "MIT",
+  "devDependencies": {
+    "vite": "3.1.0"
   }
 }
