@@ -1,13 +1,16 @@
 import Component from '../render/Component';
 import httpRequest from '../httpRequest';
 import './people.css';
+import { buildFilmUrl } from '../location/redirectToFilm';
 
 export default class People extends Component {
   async buildPerson(person) {
     const { name, age, gender, films = [] } = person;
     const filmsWithData = await Promise.all(films.map(httpRequest));
-    const filmsElement = filmsWithData
-      .reduce((acc, film) => acc + `<li><a href="${film.url}">${film.title}</a></li>`, '');
+    const filmsElement = filmsWithData.reduce(
+      (acc, {id, title}) => acc + `<li><a href="${buildFilmUrl(id)}">${title}</a></li>`,
+      '',
+    );
 
     return `
         <article>
